@@ -33,6 +33,23 @@ div15.setAttribute("class", "gridElement");
 const div16 = document.createElement("div");
 div16.setAttribute("class", "gridElement");
 
+// Set up a “hover” effect so that the grid divs change color 
+// when your mouse passes over them, leaving a (pixelated) trail 
+// through your grid like a pen would.
+
+// Create 2 listener functions using event delegation
+
+// Create 1 listener function for mouseenter event
+ 
+// 2 options:
+// If mouseenter a grid element
+// Either:
+// + Change class of element
+// or
+// Highlight element using custom function
+
+// Create 1 listetner function for mouseleave event
+
 container.appendChild(div1);
 container.appendChild(div2);
 container.appendChild(div3);
