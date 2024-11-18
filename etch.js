@@ -40,7 +40,11 @@ div16.setAttribute("class", "gridElement");
 // Create 2 listener functions using event delegation
 
 // Create 1 listener function for mouseenter event
- 
+ container.addEventListener("mouseover", (event) => {
+    let target = event.target;
+    if (target.className == "gridElement")
+        console.log("found me")
+ });
 // 2 options:
 // If mouseenter a grid element
 // Either:
