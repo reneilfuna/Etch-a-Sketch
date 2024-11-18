@@ -7,27 +7,6 @@ for (let i = 1; i <= 16; i++) {
     container.appendChild(div);
 }
 
-//  Add a button on the top of the screen that will send the user a popup 
-//  asking for the number of squares per side for the new grid. Once entered, 
-//  the existing grid should be removed, and a new grid should be generated 
-//  in the same total space as before (e.g., 960px wide) so that you’ve got 
-//  a new sketch pad.
-
-// Reference header container
-const header = document.getElementById("header");
-// Create a button
-const button = document.createElement("button");
-button.textContent = "CLick Me!";
-// Create event listener for clicking button
-
-// Link to function that calls a prompt
-
-// Enter prompt input into function
-// Function resets the grid and creates a new one 
-
-// Append to header container
-header.appendChild(button);
-
 // Set up a “hover” effect so that the grid divs change color 
 // when your mouse passes over them, leaving a (pixelated) trail 
 // through your grid like a pen would.
@@ -48,4 +27,17 @@ container.addEventListener("mouseout", (event) => {
         target.setAttribute("class", "gridElement")
  });
 
+//  Add a button on the top of the screen that will send the user a popup 
+//  asking for the number of squares per side for the new grid. Once entered, 
+//  the existing grid should be removed, and a new grid should be generated 
+//  in the same total space as before (e.g., 960px wide) so that you’ve got 
+//  a new sketch pad.
+
+// Reference button
+// Create event listener for clicking button
+
+// Link to function that calls a prompt
+
+// Enter prompt input into function
+// Function resets the grid and creates a new one 
 
