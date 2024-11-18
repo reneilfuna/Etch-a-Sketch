@@ -1,5 +1,8 @@
 const container = document.getElementById("container");
 
+const header = document.createElement("div");
+const footer = document.createElement("div");
+
 const div1 = document.createElement("div");
 div1.setAttribute("class", "gridElement");
 const div2 = document.createElement("div");
