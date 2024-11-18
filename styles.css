@@ -3,8 +3,16 @@ body {
     flex-direction: column;
 }
 
+#header,
+#footer {
+    display: flex;
+    flex-direction: row;
+    height: 200px;
+}
+
 #container {
     display: flex;
+    flex-direction: row;
     flex-grow: 1;
     flex-shrink: 0;
     width: 500px;
