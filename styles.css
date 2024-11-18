@@ -37,3 +37,9 @@ body {
     background-color: maroon;
 }
 
+.overGridElement {
+    height: 25%;
+    width: 25%;
+    display: flex;
+    background-color: rgb(161, 51, 51);
+}
