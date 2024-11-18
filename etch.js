@@ -35,7 +35,7 @@ container.addEventListener("mouseout", (event) => {
 //  a new sketch pad.
 
 // Reference header container
-
+const header = document.getElementById("header");
 // Create a button
 
 // Create event listener for clicking button
