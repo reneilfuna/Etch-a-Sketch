@@ -10,10 +10,9 @@
 }
 
 .gridElement {
-    height: 20%;
-    width: 20%;
+    height: 25%;
+    width: 25%;
     display: flex;
-    background-color: burlywood;
-    margin: 2.5%;
+    background-color: maroon;
 }
 
