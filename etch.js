@@ -37,7 +37,8 @@ container.addEventListener("mouseout", (event) => {
 const button = document.getElementById("elementButton");
 // Create event listener for clicking button
 button.addEventListener("click", (event) => {
-    console.log("button clicked");
+    inputGridLength = prompt("How many squares per side would you like for the grid?");
+    console.log(inputGridLength);
 });
 
 // Link to function that calls a prompt
