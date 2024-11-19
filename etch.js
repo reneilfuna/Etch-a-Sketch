@@ -48,6 +48,14 @@ button.addEventListener("click", (event) => {
         inputGridLength = prompt("A grid length larger than 100 is not enabled! Please try another value.");
     }
 
+    while (typeof(inputGridLength) != 'number'){
+        console.log(typeof(inputGridLength));
+        inputGridLength = parseInt(prompt("Please enter a number value betweeen 1 and 100."), 10);
+        while (isNaN(inputGridLength)){
+            inputGridLength = parseInt(prompt("Please enter a number value betweeen 1 and 100."), 10);
+        }
+    }
+
     console.log(inputGridLength);
     // Call function using inputGridLength that redistributes the grid
 });
