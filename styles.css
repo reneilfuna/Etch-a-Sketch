@@ -38,15 +38,19 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 200px;
-    padding: 10px;
+    width: 240px;
+    padding: 6px;
     border: 0;
     margin: 0;
 }
 
 button {
-    width: 80%;
+    width: 70%;
     height: 35%;
+}
+
+#counter {
+    font-size: 18px;
 }
 
 #container {
