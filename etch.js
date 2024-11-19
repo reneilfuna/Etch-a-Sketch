@@ -39,7 +39,7 @@ container.addEventListener("mouseout", (event) => {
 //  in the same total space as before (e.g., 960px wide) so that you’ve got 
 //  a new sketch pad.
 const counter = document.getElementById("counter");
-counter.textContent = `# of Squares Per Side: `
+counter.textContent = `# of Squares Per Side: 4`
 
 function removeElements(nodeList){
     // Loop through nodelist
@@ -48,26 +48,36 @@ function removeElements(nodeList){
     }
 }
 
+function fractionToPercent(gridLength){
+    percentage = (100 / gridLength);
+    return percentage.toFixed(2);
+}
+
 function buildGrid(gridLength){
     // Remove initially created div elements
     // Call nodeList of grid elements
     const grids = document.querySelectorAll(".rowElement");
     // call function on node list
     removeElements(grids);
+    gridUnit = fractionToPercent(gridLength);
+    console.log(gridUnit);
     // Build vertical divs on outside loop
     for (let i = 1; i <= gridLength; i++) {
         const rowDiv = document.createElement('div');
         rowDiv.id = `rowDiv${i}`;
         rowDiv.classList.add("rowElement");
+        rowDiv.style.height = `${gridUnit}%`;
         container.appendChild(rowDiv);
         for (let i = 1; i <= gridLength; i++){
             const gridDiv = document.createElement("div");
             gridDiv.id = `gridDiv${i}`;
             gridDiv.classList.add("gridElement");
+            gridDiv.style.width = `${gridUnit}%`;
             rowDiv.appendChild(gridDiv);
         }
     }    
     // Append div to container
+    counter.textContent = `# of Squares Per Side: ${gridLength}`
 }
 
 // Reference button
@@ -75,8 +85,8 @@ const button = document.getElementById("elementButton");
 // Create event listener for clicking button
 button.addEventListener("click", (event) => {
     inputGridLength = parseInt(prompt("How many squares per side would you like for the grid?"),10);
-    while (inputGridLength > 100){
-        inputGridLength = parseInt(prompt("A grid length larger than 100 is not enabled! Please try another value."), 10);
+    while (inputGridLength > 100 || inputGridLength < 1){
+        inputGridLength = parseInt(prompt("Please enter a number value betweeen 1 and 100."), 10);
     }
 
     while (typeof(inputGridLength) != 'number'){
