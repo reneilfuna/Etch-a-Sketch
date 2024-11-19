@@ -32,19 +32,26 @@ container.addEventListener("mouseout", (event) => {
 //  the existing grid should be removed, and a new grid should be generated 
 //  in the same total space as before (e.g., 960px wide) so that you’ve got 
 //  a new sketch pad.
+const counter = document.getElementById("counter");
+counter.textContent = `# of Squares Per Side: `
+
+function buildGrid(gridLength){
+
+}
 
 // Reference button
 const button = document.getElementById("elementButton");
 // Create event listener for clicking button
 button.addEventListener("click", (event) => {
     inputGridLength = prompt("How many squares per side would you like for the grid?");
+    while (inputGridLength > 100){
+        inputGridLength = prompt("A grid length larger than 100 is not enabled! Please try another value.");
+    }
+
     console.log(inputGridLength);
+    // Call function using inputGridLength that redistributes the grid
 });
 
-// Link to function that calls a prompt
 
-// Enter prompt input into function
-// Function resets the grid and creates a new one 
-const counter = document.getElementById("counter");
-counter.textContent = `# of Squares Per Side: `
+
 
