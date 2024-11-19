@@ -42,8 +42,6 @@ function removeElements(nodeList){
     for (node of nodeList){
         container.removeChild(node);
     }
-        // For each item in node
-        // Remove Child
 }
 
 function buildGrid(gridLength){
@@ -53,11 +51,17 @@ function buildGrid(gridLength){
     // call function on node list
     removeElements(grids);
     // Build vertical divs on outside loop
-
+    for(i=0; i<gridLength; i++){
         // Build horizontal divs on inside loop
+        const rowDiv = document.createElement("div");
+        div.id = `row${i}`;
+        div.classList.add("rowElement");
+        for(i=0; i<gridLength; i++){
         // Divide 100% by number of units, maybe create a helper function to calculate width per unit
         // Append square divs into row divs
-
+        }
+        container.appendChild(div);
+    }
     // Append div to container
 }
 
