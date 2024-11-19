@@ -34,6 +34,7 @@ container.addEventListener("mouseout", (event) => {
 //  a new sketch pad.
 
 // Reference button
+const button = document.getElementById("elementButton");
 // Create event listener for clicking button
 
 // Link to function that calls a prompt
