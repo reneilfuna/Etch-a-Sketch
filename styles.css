@@ -15,7 +15,7 @@ body {
 #footer {
     display: flex;
     flex-direction: row;
-    flex-basis: 200px;
+    flex-basis: 100px;
     width: 100%;
 }
 
@@ -25,7 +25,20 @@ body {
 }
 
 #title {
-    width: 60%
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: monospace;
+    font-weight: 700;
+}
+
+#buttonContainer,
+#counter {
+    width: 200px;
+    padding: 10px;
+    border: 0;
+    margin: 0;
 }
 
 #container {
