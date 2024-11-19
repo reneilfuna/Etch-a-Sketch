@@ -1,12 +1,16 @@
 const container = document.getElementById("container");
 
-let numOfElements = 16;
-
-for (let i = 1; i <= numOfElements; i++) {
-    const div = document.createElement('div');
-    div.id = `div${i}`;
-    div.classList.add("gridElement");
-    container.appendChild(div);
+for (let i = 1; i <= 4; i++) {
+    const rowDiv = document.createElement('div');
+    rowDiv.id = `rowDiv${i}`;
+    rowDiv.classList.add("rowElement");
+    container.appendChild(rowDiv);
+    for (let i = 1; i <= 4; i++){
+        const gridDiv = document.createElement("div");
+        gridDiv.id = `gridDiv${i}`;
+        gridDiv.classList.add("gridElement");
+        rowDiv.appendChild(gridDiv);
+    }
 }
 
 // Set up a “hover” effect so that the grid divs change color 
