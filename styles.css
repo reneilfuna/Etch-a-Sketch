@@ -64,15 +64,22 @@ button {
     padding: 20px;
 }
 
-.gridElement {
+.rowElement {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
     height: 25%;
+}
+
+.gridElement {
+    height: 100%;
     width: 25%;
     display: flex;
     background-color: maroon;
 }
 
 .overGridElement {
-    height: 25%;
+    height: 100%;
     width: 25%;
     display: flex;
     background-color: rgb(161, 51, 51);
