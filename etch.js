@@ -51,7 +51,7 @@ function removeElements(nodeList){
 function buildGrid(gridLength){
     // Remove initially created div elements
     // Call nodeList of grid elements
-    const grids = document.querySelectorAll(".gridElement");
+    const grids = document.querySelectorAll(".rowElement");
     // call function on node list
     removeElements(grids);
     // Build vertical divs on outside loop
