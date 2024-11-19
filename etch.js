@@ -40,4 +40,6 @@ container.addEventListener("mouseout", (event) => {
 
 // Enter prompt input into function
 // Function resets the grid and creates a new one 
+const counter = document.getElementById("counter");
+counter.textContent = `# of Squares Per Side: `
 
