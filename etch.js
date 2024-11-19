@@ -36,6 +36,9 @@ container.addEventListener("mouseout", (event) => {
 // Reference button
 const button = document.getElementById("elementButton");
 // Create event listener for clicking button
+button.addEventListener("click", (event) => {
+    console.log("button clicked");
+});
 
 // Link to function that calls a prompt
 
