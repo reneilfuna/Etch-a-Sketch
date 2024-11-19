@@ -1,6 +1,8 @@
 const container = document.getElementById("container");
 
-for (let i = 1; i <= 16; i++) {
+let numOfElements = 16;
+
+for (let i = 1; i <= numOfElements; i++) {
     const div = document.createElement('div');
     div.id = `div${i}`;
     div.classList.add("gridElement");
@@ -35,8 +37,22 @@ container.addEventListener("mouseout", (event) => {
 const counter = document.getElementById("counter");
 counter.textContent = `# of Squares Per Side: `
 
-function buildGrid(gridLength){
+function removeElements(){
+    // Loop through nodelist
+        // For each item in node
+        // Remove Child
+}
 
+function buildGrid(gridLength){
+    // Remove initially created div elements
+
+    // Build vertical divs on outside loop
+
+        // Build horizontal divs on inside loop
+        // Divide 100% by number of units, maybe create a helper function to calculate width per unit
+        // Append square divs into row divs
+
+    // Append div to container
 }
 
 // Reference button
