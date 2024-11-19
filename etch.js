@@ -65,9 +65,9 @@ function buildGrid(gridLength){
 const button = document.getElementById("elementButton");
 // Create event listener for clicking button
 button.addEventListener("click", (event) => {
-    inputGridLength = prompt("How many squares per side would you like for the grid?");
+    inputGridLength = parseInt(prompt("How many squares per side would you like for the grid?"),10);
     while (inputGridLength > 100){
-        inputGridLength = prompt("A grid length larger than 100 is not enabled! Please try another value.");
+        inputGridLength = parseInt(prompt("A grid length larger than 100 is not enabled! Please try another value."), 10);
     }
 
     while (typeof(inputGridLength) != 'number'){
