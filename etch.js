@@ -37,15 +37,21 @@ container.addEventListener("mouseout", (event) => {
 const counter = document.getElementById("counter");
 counter.textContent = `# of Squares Per Side: `
 
-function removeElements(){
+function removeElements(nodeList){
     // Loop through nodelist
+    for (node of nodeList){
+        container.removeChild(node);
+    }
         // For each item in node
         // Remove Child
 }
 
 function buildGrid(gridLength){
     // Remove initially created div elements
-
+    // Call nodeList of grid elements
+    const grids = document.querySelectorAll(".gridElement");
+    // call function on node list
+    removeElements(grids);
     // Build vertical divs on outside loop
 
         // Build horizontal divs on inside loop
@@ -74,6 +80,7 @@ button.addEventListener("click", (event) => {
 
     console.log(inputGridLength);
     // Call function using inputGridLength that redistributes the grid
+    buildGrid(inputGridLength);
 });
 
 
