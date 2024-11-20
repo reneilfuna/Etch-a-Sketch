@@ -17,6 +17,12 @@ for (let i = 1; i <= 4; i++) {
 // when your mouse passes over them, leaving a (pixelated) trail 
 // through your grid like a pen would.
 
+// Rather than squares being the same color throughout the grid, 
+// randomize the squares’ RGB values with each interaction.
+
+// Reference button
+const colorBtn = document.getElementById("colorChange");
+
 // Create 2 listener functions using event delegation
 
 // Create 1 listener function for mouseover event
@@ -103,9 +109,3 @@ gridBtn.addEventListener("click", (event) => {
     // Call function using inputGridLength that redistributes the grid
     buildGrid(inputGridLength);
 });
-
-// Rather than squares being the same color throughout the grid, 
-// randomize the squares’ RGB values with each interaction.
-
-// Reference button
-const colorBtn = document.getElementById("colorChange");
