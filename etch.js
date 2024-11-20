@@ -44,8 +44,6 @@ container.addEventListener("mouseout", (event) => {
 //  the existing grid should be removed, and a new grid should be generated 
 //  in the same total space as before (e.g., 960px wide) so that you’ve got 
 //  a new sketch pad.
-const counter = document.getElementById("counter");
-counter.textContent = `# of Squares Per Side: 4`
 
 function removeElements(nodeList){
     // Loop through nodelist
@@ -82,8 +80,6 @@ function buildGrid(gridLength){
             rowDiv.appendChild(gridDiv);
         }
     }    
-    // Append div to container
-    counter.textContent = `# of Squares Per Side: ${gridLength}`
 }
 
 // Reference button
