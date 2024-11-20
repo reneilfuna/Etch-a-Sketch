@@ -103,3 +103,9 @@ gridBtn.addEventListener("click", (event) => {
     // Call function using inputGridLength that redistributes the grid
     buildGrid(inputGridLength);
 });
+
+// Rather than squares being the same color throughout the grid, 
+// randomize the squares’ RGB values with each interaction.
+
+// Reference button
+const colorBtn = document.getElementById("colorChange");
