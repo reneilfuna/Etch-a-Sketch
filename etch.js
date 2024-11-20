@@ -23,6 +23,16 @@ for (let i = 1; i <= 4; i++) {
 // Reference button
 const colorBtn = document.getElementById("colorChange");
 
+colorBtn.addEventListener("click", (event) => {
+    if (colorBtn.textContent == "Colour Mode: Off"){
+        colorBtn.textContent = "Colour Mode: On";
+    }
+    else{
+        colorBtn.textContent = "Colour Mode: Off";
+    }
+    
+});
+
 // Create 2 listener functions using event delegation
 
 // Create 1 listener function for mouseover event
