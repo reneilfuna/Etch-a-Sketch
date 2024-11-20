@@ -29,8 +29,14 @@ for (let i = 1; i <= 4; i++) {
 // Create 1 listetner function for mouseout event
 container.addEventListener("mouseout", (event) => {
     let target = event.target;
-    if (target.className == "overGridElement")
-        setTimeout(target.setAttribute("class", "gridElement"), 30000);
+    if (target.className == "overGridElement"){
+
+        setTimeout(function() {
+            target.setAttribute("class", "gridElement");
+        }, 10000);
+
+        console.log("its working i think");
+    }
  });
 
 //  Add a button on the top of the screen that will send the user a popup 
