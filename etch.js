@@ -30,7 +30,7 @@ for (let i = 1; i <= 4; i++) {
 container.addEventListener("mouseout", (event) => {
     let target = event.target;
     if (target.className == "overGridElement")
-        target.setAttribute("class", "gridElement")
+        setTimeout(target.setAttribute("class", "gridElement"), 30000);
  });
 
 //  Add a button on the top of the screen that will send the user a popup 
@@ -101,7 +101,3 @@ button.addEventListener("click", (event) => {
     // Call function using inputGridLength that redistributes the grid
     buildGrid(inputGridLength);
 });
-
-
-
-
