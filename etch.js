@@ -29,17 +29,26 @@ colorBtn.addEventListener("click", (event) => {
     }
     else{
         colorBtn.textContent = "Colour Mode: Off";
-    }
-    
+    } 
 });
+
+
 
 // Create 2 listener functions using event delegation
 
 // Create 1 listener function for mouseover event
  container.addEventListener("mouseover", (event) => {
     let target = event.target;
-    if (target.className == "gridElement")
-        target.setAttribute("class", "overGridElement")
+    if (colorBtn.textContent = "Colour Mode: Off"){
+        if (target.className == "gridElement")
+            target.setAttribute("class", "overGridElement")
+    }
+    else if (colorBtn.textContent = "Colour Mode: On"){
+        if (target.className == "gridElement"){
+            target.setAttribute("class", "overColorElement")
+            target.style["background-color"] = randomRGB();
+        }
+    }
  });
 
 // Create 1 listetner function for mouseout event
