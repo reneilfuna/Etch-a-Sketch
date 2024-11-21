@@ -13,8 +13,22 @@ for (let i = 1; i <= 4; i++) {
     }
 }
 
+function fractionToPercent(gridLength){
+    percentage = (100 / gridLength);
+    return percentage.toFixed(2);
+}
+
 const counter = document.getElementById("unitCounter");
 
+function getGridLength() {
+    counterText = counter.textContent;
+    let match = counterText.match(/(\d+)/);
+    if (match){
+        length = fractionToPercent(match[0]);
+        return length;
+    }
+
+}
 // Set up a “hover” effect so that the grid divs change color 
 // when your mouse passes over them, leaving a (pixelated) trail 
 // through your grid like a pen would.
@@ -64,12 +78,14 @@ function randomRGB(){
 container.addEventListener("mouseout", (event) => {
     let target = event.target;
 
+
     if (target.className == "overGridElement" || target.className == "overColorElement"){
         setTimeout(function() {
             target.setAttribute("class", "gridElement");
             target.removeAttribute("style", "background-color");
+            unit = getGridLength();
+            target.style.width = `${unit}%`;
         }, 5000);
-        console.log("its working i think");
     }    
  });
 
@@ -86,9 +102,8 @@ function removeElements(nodeList){
     }
 }
 
-function fractionToPercent(gridLength){
-    percentage = (100 / gridLength);
-    return percentage.toFixed(2);
+function unitCalculator(gridLength) {
+    gridUnit = fractionToPercent(gridLength);
 }
 
 function buildGrid(gridLength){
@@ -98,7 +113,6 @@ function buildGrid(gridLength){
     // call function on node list
     removeElements(grids);
     gridUnit = fractionToPercent(gridLength);
-    console.log(gridUnit);
     // Build vertical divs on outside loop
     for (let i = 1; i <= gridLength; i++) {
         const rowDiv = document.createElement('div');
@@ -135,8 +149,6 @@ gridBtn.addEventListener("click", (event) => {
             inputGridLength = parseInt(prompt("Please enter a number value betweeen 1 and 100."), 10);
         }
     }
-
-    console.log(inputGridLength);
     // Call function using inputGridLength that redistributes the grid
     buildGrid(inputGridLength);
 });
