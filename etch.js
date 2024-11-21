@@ -32,7 +32,7 @@ colorBtn.addEventListener("click", (event) => {
     } 
 });
 
-function randomColorGen(){
+function randomRGB(){
     // Generate 3 random values between 255
     let R = Math.round(Math.random() * 255);
     let G = Math.round(Math.random() * 255);
