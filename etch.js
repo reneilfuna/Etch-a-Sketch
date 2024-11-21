@@ -61,14 +61,14 @@ function randomRGB(){
 // Create 1 listetner function for mouseout event
 container.addEventListener("mouseout", (event) => {
     let target = event.target;
-    if (target.className == "overGridElement"){
 
+    if (target.className == "overGridElement" || target.className == "overColorElement"){
         setTimeout(function() {
             target.setAttribute("class", "gridElement");
-        }, 10000);
-
+            target.removeAttribute("style", "background-color");
+        }, 5000);
         console.log("its working i think");
-    }
+    }    
  });
 
 //  Add a button on the top of the screen that will send the user a popup 
@@ -104,6 +104,7 @@ function buildGrid(gridLength){
         rowDiv.classList.add("rowElement");
         rowDiv.style.height = `${gridUnit}%`;
         container.appendChild(rowDiv);
+        
         for (let i = 1; i <= gridLength; i++){
             const gridDiv = document.createElement("div");
             gridDiv.id = `gridDiv${i}`;
