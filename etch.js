@@ -13,6 +13,8 @@ for (let i = 1; i <= 4; i++) {
     }
 }
 
+const counter = document.getElementById("unitCounter");
+
 // Set up a “hover” effect so that the grid divs change color 
 // when your mouse passes over them, leaving a (pixelated) trail 
 // through your grid like a pen would.
@@ -104,7 +106,7 @@ function buildGrid(gridLength){
         rowDiv.classList.add("rowElement");
         rowDiv.style.height = `${gridUnit}%`;
         container.appendChild(rowDiv);
-        
+
         for (let i = 1; i <= gridLength; i++){
             const gridDiv = document.createElement("div");
             gridDiv.id = `gridDiv${i}`;
@@ -112,7 +114,9 @@ function buildGrid(gridLength){
             gridDiv.style.width = `${gridUnit}%`;
             rowDiv.appendChild(gridDiv);
         }
-    }    
+    }
+    //Update page counter
+    counter.textContent = `Grid Length: ${gridLength}`
 }
 
 // Reference button
