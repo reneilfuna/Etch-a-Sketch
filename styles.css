@@ -59,6 +59,12 @@ button {
     align-items: center;
 }
 
+#unitCounter {
+    font-family: monospace;
+    font-size: 30px;
+    font-weight: 500;
+}
+
 #container {
     display: flex;
     flex-direction: row;
